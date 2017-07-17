@@ -9,9 +9,41 @@
     <link rel="stylesheet" href="assets/css/app.css">
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/icons/foundation-icons.css">
+    <link rel="stylesheet" href="assets/aos.css" />
+    <style>#preloader{
+      position: fixed;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      background: #fff;
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: #00796B;
+      font-size: 2em;
+    }
+    #loader{
+      display: block;
+      width: 100px;
+      height: 100px;
+      background-image: url("assets/img/loading.gif");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+</style>
   </head>
   <body>
 
+    <section id="preloader">
+      <div id="loader"></div>
+      <div class="loader2">
+        Cargando
+        </div>
+    </section>
     <section class="top-info">
       <div class="row align-middle align-justify">
         <div class="column small-5">
@@ -28,21 +60,34 @@
     </section>
     
     <header>
-      <div class="row align-middle">
-        <div class="column small-3 text-center">
-          <div class="callout small">
-            <img src="assets/img/header2.png" alt="">
+      <div class="data-sticky" data-sticky-container id="scrollStickyMin">
+        <div class="data-sticky back-color-sticky" data-sticky data-options="marginTop:0;" data-sticky-on="small" data-top-anchor="scrollStickyMin" >
+          <div class="row">
+            <div class="column small-3 text-center">
+              <div class="callout small">
+                <img src="assets/img/headermin2.png" alt="">
+              </div>
+            </div>
           </div>
         </div>
-        <div class="column small-9">
-          <ul class="menu">
-            <li class="is-active"><a href="#">Inicio</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Contacto</a></li>
-            <li><a href="#">Resultados</a></li>
-          </ul>
-        </div>
       </div>
+      <div class="back-sticky"></div>
+        <div class="row align-middle front-sticky">
+          <div class="column small-3 text-center" >
+            <div class="callout small" >
+              <img src="assets/img/header2.png" alt="" >
+            </div>
+          </div>
+          <div class="column small-9" data-sticky-container id="scrollSticky2">
+            <ul id="change-menu" class="menu"  data-sticky data-options="marginTop:0;" data-sticky-on="small" data-top-anchor="scrollSticky2" data-sticky-class="sticky sticky-text-on">
+              <li class="is-active"><a href="#"><i class="fi-home"></i> &nbsp;Inicio</a></li>
+              <li ><a href="#" class="menu-item-sticky"><i class="fi-torsos-all"></i> &nbsp;Servicios</a></li>
+              <li ><a href="#" class="menu-item-sticky"><i class="fi-telephone"></i> &nbsp;Contacto</a></li>
+              <li ><a href="#" class="menu-item-sticky"><i class="fi-graph-trend"></i> &nbsp;Resultados</a></li>
+            </ul>
+          </div>
+        </div>
+    
     </header>
     
     
@@ -57,7 +102,7 @@
           <li class="is-active orbit-slide">
             <figure class="orbit-figure">
               <img class="orbit-image" src="assets/img/slide1.png" alt="Space">
-              <figcaption class="orbit-caption">#argoslab ♥</figcaption>
+              <figcaption class="orbit-caption">#Regreso a Clases</figcaption>
             </figure>
           </li>
           <!-- <li class="orbit-slide">
@@ -93,44 +138,44 @@
     
     <section class="content">
       <article class="row collapse">
-        <div class="column small-12 large-6 align-self-middle" >
+        <div class="column small-12 large-6 align-self-middle" data-aos="fade-right">
           <h1>Nosotros</h1>
           <p class="text-justify">En Argos ofrecemos servicios de alta calidad en Análisis Clínicos, contamos con una amplia gama de servicios, esforzándonos y ofreciendo resultados oportunos en beneficio de nuestros pacientes.</p>
         </div>
-        <div class="column small-12 large-6" >
+        <div class="column small-12 large-6" data-aos="fade-left">
           <div class="thumbnail nosotros">
     
           </div>
         </div>
       </article>
       <article class="row collapse">
-        <div class="column small-12 large-6 large-order-2 align-self-middle">
+        <div class="column small-12 large-6 large-order-2 align-self-middle" data-aos="fade-left">
           <h1>Estudios</h1>
           <p class="text-justify ">Para brindar un diagnóstico médico adecuado se necesita de estudios que no están relacionados con el análisis de muestras biológicas en el cuerpo de los pacientes, sino con imágenes o monitoreos y registros del funcionamiento en ciertos órganos o sistemas.</p>
         </div>
-        <div class="column small-12 large-6 large-order-1">
+        <div class="column small-12 large-6 large-order-1" data-aos="fade-right">
           <div class="thumbnail estudios">
     
           </div>
         </div>
       </article>
       <article class="row collapse">
-        <div class="column small-12 large-6 align-self-middle">
+        <div class="column small-12 large-6 align-self-middle" data-aos="fade-right">
           <h1>Análisis Clínicos</h1>
           <p>Los Análisis Clínicos consisten en el estudio de los componentes de muestras biologicas que se toman del cuerpo y sus resultados se utilizan para confirmar o descartar un diagnóstico médico, así como para monitorear el efecto de un tratamiento.</p>
         </div>
-        <div class="column small-12 large-6">
+        <div class="column small-12 large-6" data-aos="fade-left">
           <div class="thumbnail analisis">
     
           </div>
         </div>
       </article>
         <article class="row collapse">
-          <div class="column small-12 large-6 large-order-2 align-self-middle">
+          <div class="column small-12 large-6 large-order-2 align-self-middle" data-aos="fade-left">
             <h1>Perfiles</h1>
             <p>Son un conjunto de exámenes de laboratorio clínico que informa sobre el estado de un órgano ,las ventajas de efectuar un perfil es que resulta más económico el costo de un perfil que los exámenes clínicos por separado.</p>
           </div>
-          <div class="column small-12 large-6 large-order-1">
+          <div class="column small-12 large-6 large-order-1" data-aos="fade-right">
             <div class="thumbnail perfiles">
     
             </div>
@@ -138,17 +183,53 @@
         </article>
     </section>
     <footer>
+      <div data-aos="fade-up">
+        <div class="row align-center subscribe" >
+          <div class="column small-12 large-3">Infórmese de nuestras últimas noticias y ofertas especiales</div>
+          <div class="column small-12 large-5 text-center">
+            <div class="input-group">
+              <span class="input-group-label"><i class="fi-mail"></i></span>
+              <input class="input-group-field" type="email" placeholder="email">
+              <div class="input-group-button">
+                <input type="submit" class="button" value="Suscribirse">
+              </div>
+            </div>
+            <p class="text-left">Puede darse de baja en cualquier momento. Para ello, consulte nuestra información de contacto.</p>
+          </div>
+        </div>
+        <div class="callout expanded" >
+          <div class="row info">
+            <div class="column small-12 large-5 text-center large-text-left">
+              <h6><STRONG>MAPA DEL SITIO</STRONG></h6>
+              <ul class="menu vertical mapsite">
+                <li><a href="">Aviso de Privacidad</a></li>
+                <li><a href="">Servicios</a></li>
+                <li><a href="">Ir al Mapa</a></li>
+              </ul>
     
-      <ul class="menu float-right">
-        <li><a href=""><i class="fi-social-facebook"></i></a></li>
-        <li><a href=""><i class="fi-social-twitter"></i></a></li>
-        <li><a href=""><i class="fi-social-instagram"></i></a></li>
-      </ul>
-    <p class="brand">  © 2017 ARGOS - Laboratorio de Análisis Clínicos</p>
-    <p>Atención a Clientes:&nbsp;&nbsp;<a href="#" class="attention"> <i class="fi-telephone"></i>(55) 5714 0778</a></p>
+            </div>
+            <div class="column small-12 large-4 text-center large-text-left">
+              <h6><strong>INFORMACIÓN DE LA SUCURSAL</strong></h6>
+              <p>Avenida Leon de los Aldama, Mz.248 Lt.3374, Col. San Felipe de Jesús, CP. 07510, Ciudad de México</p>
+              <p>Llámenos: <a href="tel:55571140778">(55) 5714 0778</a> <br>Envíenos un correo electrónico: <a href="mailto:contacto@labargos.com">contacto@labargos.com</a></p>
+            </div>
+            <div class="column small-12 large-3 text-center large-text-right large-push-4">
+              <ul class="menu">
+                <li><a href=""><i class="fi-social-facebook"></i></a></li>
+                <li><a href=""><i class="fi-social-twitter"></i></a></li>
+                <li><a href=""><i class="fi-social-instagram"></i></a></li>
+              </ul>
+            </div>
+            <div class="column small-12 large-8 text-center large-text-left">
+              <span class="brand">  © 2017 ARGOS - Laboratorio de Análisis Clínicos</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
     
 
+    <script src="assets/aos.js"></script>
     <script src="assets/js/app.js"></script>
   </body>
 </html>
